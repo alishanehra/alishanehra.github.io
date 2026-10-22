@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alisha Nehra | Business Analytics and Operations</title>
+<meta name="description" content="Alisha Nehra is a Texas A&M psychology student with business and AI minors, focused on analytics, operations, and growth.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📈</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F2F5F3; --ink:#10302D; --muted:#4D6663; --line:#C9D6D2;
+  --marigold:#E9A114; --wash:#E3ECE8; --white:#FFFFFF;
+  --head:'Bricolage Grotesque','Helvetica Neue',Arial,sans-serif;
+  --body:'Newsreader',Georgia,'Times New Roman',serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:1.125rem;line-height:1.6}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--marigold);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0;font-family:var(--head);font-weight:500;font-size:.95rem}
+nav ul{display:flex;gap:24px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+nav a{text-decoration:none}
+nav a:hover{text-decoration:underline;text-decoration-color:var(--marigold);text-underline-offset:5px;text-decoration-thickness:2px}
+
+/* hero */
+.hero{padding:56px 0 72px}
+h1{font-family:var(--head);font-weight:700;font-size:clamp(2.6rem,7.2vw,5.6rem);line-height:1;letter-spacing:-.035em;margin:0 0 28px;max-width:15ch}
+.lede{font-size:1.35rem;max-width:34em;margin:0 0 32px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{font-family:var(--head);font-weight:500;font-size:1rem;padding:12px 22px;border:2px solid var(--ink);text-decoration:none;border-radius:999px}
+.btn.primary{background:var(--ink);color:var(--paper)}
+.btn:hover{background:var(--marigold);border-color:var(--marigold);color:var(--ink)}
+.pipe{display:grid;grid-template-columns:repeat(5,1fr);gap:4px;margin-top:64px;font-family:var(--head);font-size:.85rem;font-weight:500}
+.pipe div{padding:10px 12px;color:var(--paper);background:var(--ink)}
+.pipe div:nth-child(1){width:100%}
+.pipe div:nth-child(2){background:#1D4A45}
+.pipe div:nth-child(3){background:#2B645D}
+.pipe div:nth-child(4){background:#3E7F76}
+.pipe div:nth-child(5){background:var(--marigold);color:var(--ink)}
+.pipe-note{font-size:.95rem;color:var(--muted);margin:10px 0 0}
+
+/* sections */
+section{padding:72px 0;border-top:1px solid var(--line)}
+.grid{display:grid;grid-template-columns:200px 1fr;gap:40px}
+h2{font-family:var(--head);font-weight:700;font-size:1.5rem;letter-spacing:-.01em;margin:0;position:sticky;top:24px;align-self:start}
+h3{font-family:var(--head);font-weight:700;font-size:1.6rem;letter-spacing:-.02em;line-height:1.15;margin:0 0 8px}
+p{margin:0 0 1em;max-width:38em}
+.sub{color:var(--muted);font-style:italic;margin-bottom:20px}
+
+/* projects */
+.project{background:var(--white);border:1px solid var(--line);padding:36px;margin-bottom:32px;border-radius:4px}
+.project:first-child{border-left:6px solid var(--marigold)}
+.project:last-child{margin-bottom:0;border-left:6px solid #3E7F76}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin:28px 0}
+.facts h4{font-family:var(--head);font-size:1rem;margin:0 0 6px}
+.facts p,.facts ul{margin:0;font-size:1.02rem}
+.facts ul{padding-left:1.1em}
+.facts li{margin-bottom:5px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:0 0 24px}
+.tags li{font-family:var(--head);font-size:.85rem;font-weight:500;background:var(--wash);padding:4px 12px;border-radius:999px}
+.links{display:flex;gap:20px;font-family:var(--head);font-weight:500;font-size:.95rem}
+.tie{border-top:1px solid var(--line);padding-top:16px;font-size:1rem;color:var(--muted);margin:0;max-width:none}
+
+/* experience */
+.job{display:grid;grid-template-columns:1fr auto;gap:4px 20px;padding:22px 0;border-bottom:1px solid var(--line)}
+.job:first-child{padding-top:0}
+.job:last-child{border-bottom:0}
+.job h3{font-size:1.2rem;margin:0}
+.job .when{font-family:var(--head);font-size:.9rem;color:var(--muted);white-space:nowrap}
+.job p{grid-column:1/-1;margin:6px 0 0;font-size:1.02rem}
+
+.skills dt{font-family:var(--head);font-weight:700;font-size:1rem;margin-top:18px}
+.skills dt:first-child{margin-top:0}
+.skills dd{margin:2px 0 0}
+.contact a{font-family:var(--head);font-weight:700;font-size:clamp(1.4rem,4vw,2.2rem);letter-spacing:-.02em;text-decoration-color:var(--marigold);text-decoration-thickness:3px;text-underline-offset:6px}
+footer{padding:32px 0 48px;color:var(--muted);font-size:.95rem;border-top:1px solid var(--line)}
+
+@media (max-width:800px){
+  .grid{grid-template-columns:1fr;gap:20px}
+  h2{position:static}
+  .facts{grid-template-columns:1fr}
+  .project{padding:24px}
+  .pipe{grid-template-columns:1fr}
+  .pipe div:nth-child(n){width:auto}
+  .job{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav aria-label="Main">
+    <strong>Alisha Nehra</strong>
+    <ul>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <h1>I turn messy data into business decisions.</h1>
+    <p class="lede">I’m a Texas A&amp;M psychology student with minors in business and AI. I research markets, build tracking dashboards, and analyze how people behave, in sales pipelines, in workplaces, and in my own online design business.</p>
+    <div class="btns">
+      <a class="btn primary" href="#projects">See my projects</a>
+      <a class="btn" href="https://linkedin.com/in/alishanehra">LinkedIn</a>
+      <a class="btn" href="mailto:alisha123@tamu.edu">Email me</a>
+    </div>
+    <div class="pipe" aria-hidden="true">
+      <div>Research</div><div>Outreach</div><div>Engagement</div><div>Meeting</div><div>Closed</div>
+    </div>
+    <p class="pipe-note">The stages I track every day at Toro Intelligence, and the lens I bring to every project below.</p>
+  </header>
+
+  <section id="projects">
+    <div class="grid">
+      <h2>Projects</h2>
+      <div>
+
+        <article class="project">
+          <h3>Pipeline Pulse</h3>
+          <p class="sub">B2B prospect segmentation and pipeline dashboard</p>
+          <ul class="tags"><li>Python</li><li>pandas</li><li>SQL</li><li>Tableau</li><li>A/B testing</li></ul>
+          <p>A sales team has hundreds of target accounts and limited time. This project answers one question: which accounts deserve outreach first, and what message should they get? I built a prospect dataset modeled on my work researching 150+ target markets, then segmented, scored, and tracked it through every deal stage.</p>
+          <div class="facts">
+            <div>
+              <h4>What I built</h4>
+              <ul>
+                <li>A SQL schema for accounts, contacts, outreach touches, and deal stages</li>
+                <li>A Python scoring model that ranks accounts by fit and engagement</li>
+                <li>A Tableau dashboard showing conversion and drop-off by stage and segment</li>
+                <li>An A/B analysis comparing two outreach messages and follow-up cadences</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Questions it answers</h4>
+              <ul>
+                <li>Which segments convert, and which only look good on paper?</li>
+                <li>Where do accounts stall between outreach and a meeting?</li>
+                <li>Does a faster follow-up cadence beat a more personalized message?</li>
+              </ul>
+            </div>
+          </div>
+          <div class="links">
+            <a href="https://github.com/YOUR-USERNAME/pipeline-pulse">Code on GitHub</a>
+            <a href="https://public.tableau.com/">Live dashboard</a>
+          </div>
+          <p class="tie" style="margin-top:20px">Data is simulated and labeled as such in the repo. It mirrors the workflow I use at Toro Intelligence, where I research accounts, build pipeline dashboards, and refine outreach with sales and marketing.</p>
+        </article>
+
+        <article class="project">
+          <h3>Workplace Wellness Signal</h3>
+          <p class="sub">Survey analysis of workplace health and behavior</p>
+          <ul class="tags"><li>R</li><li>Python</li><li>Excel</li><li>Survey design</li><li>Data cleaning</li></ul>
+          <p>Survey data is never clean, and the real skill is knowing what you can honestly conclude from it. Using a public workplace mental health survey, I cleaned and validated the data, tested which workplace factors relate to employee well-being, and wrote the findings up the way a research team or HR leader would want to read them.</p>
+          <div class="facts">
+            <div>
+              <h4>What I built</h4>
+              <ul>
+                <li>A documented cleaning pipeline: duplicates, impossible values, free-text responses, missing data</li>
+                <li>Reliability checks and group comparisons across work settings</li>
+                <li>Regression models with plain-language interpretation</li>
+                <li>A two-page research brief with charts and clear limitations</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Questions it answers</h4>
+              <ul>
+                <li>Which workplace policies are linked to healthier outcomes?</li>
+                <li>Which patterns survive once you control for company size and role?</li>
+                <li>What should an organization do first, and what can’t this data tell it?</li>
+              </ul>
+            </div>
+          </div>
+          <div class="links">
+            <a href="https://github.com/YOUR-USERNAME/workplace-wellness-signal">Code on GitHub</a>
+            <a href="https://github.com/YOUR-USERNAME/workplace-wellness-signal/blob/main/brief.pdf">Read the brief</a>
+          </div>
+          <p class="tie" style="margin-top:20px">Built on the same skills I use as an undergraduate research analyst in the PAWW Lab and Dr. Lei-Shih Chen’s lab at Texas A&amp;M, where I clean survey datasets and analyze health and workplace behavior.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="grid">
+      <h2>Experience</h2>
+      <div>
+        <div class="job">
+          <h3>Operations and Growth Analyst, Toro Intelligence</h3><span class="when">Summer 2026 to present</span>
+          <p>Researched 150+ target markets and prospect accounts to define customer segments. Built dashboards tracking outreach, engagement, and pipeline movement by deal stage, and used customer responses to refine messaging and cadence.</p>
+        </div>
+        <div class="job">
+          <h3>Undergraduate Research Analyst, Texas A&amp;M PAWW Lab</h3><span class="when">Aug. 2026 to present</span>
+          <p>Cleaned and validated survey datasets in Excel, analyzed health and workplace behavior data, and wrote research summaries that supported study design.</p>
+        </div>
+        <div class="job">
+          <h3>Co-Founder, Little Doodler</h3><span class="when">Mar. 2020 to present</span>
+          <p>Built a custom design business that earned $20,000 in profit across 4,160 units sold. Grew an Instagram audience past 25,000 followers and launched product lines that donated 50% of profits to causes including cancer research.</p>
+        </div>
+        <div class="job">
+          <h3>Technology Consulting Associate, Yati Global Services</h3><span class="when">Summer 2025</span>
+          <p>Supported 4+ client engagements by assessing systems, mapping workflows, and presenting automation recommendations. Helped improve client workflow efficiency by 25% and cut manual processing by 15+ hours per month.</p>
+        </div>
+        <div class="job">
+          <h3>Laboratory Operations Assistant, Texas A&amp;M Gastrointestinal Laboratory</h3><span class="when">Apr. to Aug. 2026</span>
+          <p>Tracked inventory, samples, and equipment records, and benchmarked external veterinary laboratories to inform process and staffing decisions.</p>
+        </div>
+        <div class="job">
+          <h3>Sales Campaign Associate, FitMe AI</h3><span class="when">Jul. 2024 to May 2025</span>
+          <p>Ran competitor and user research to sharpen positioning for an AI fitness app before its App Store launch, and supported early user acquisition planning.</p>
+        </div>
+        <div class="job">
+          <h3>Founder and President, Senior Citizen Corner</h3><span class="when">Jan. 2023 to present</span>
+          <p>Built recurring social and wellness programs at senior living facilities, and recruited and trained the volunteers who run them.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="grid">
+      <h2>Skills</h2>
+      <dl class="skills" style="margin:0">
+        <dt>Analytics</dt><dd>Excel (PivotTables, VLOOKUP, dashboards), SQL, Python (pandas, NumPy), R, Tableau, Power BI</dd>
+        <dt>Business tools</dt><dd>HubSpot, Salesforce, Google Sheets, Microsoft Office, Notion, Asana, Jira</dd>
+        <dt>Methods</dt><dd>Market segmentation, competitor research, survey design, data cleaning, A/B testing</dd>
+        <dt>Programming</dt><dd>Java, JavaScript, C#, Unity</dd>
+        <dt>Languages</dt><dd>English (native), Hindi/Urdu (advanced), Spanish (intermediate)</dd>
+        <dt>Education</dt><dd>B.S. in Psychology, Texas A&amp;M University, May 2028. Minors in Business and AI &amp; Intelligence.</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="grid">
+      <h2>Contact</h2>
+      <div class="contact">
+        <p>I’m looking for analytics, operations, and growth internships.</p>
+        <a href="mailto:alisha123@tamu.edu">alisha123@tamu.edu</a>
+        <p style="margin-top:20px"><a href="https://linkedin.com/in/alishanehra" style="font-size:1.1rem">linkedin.com/in/alishanehra</a></p>
+      </div>
+    </div>
+  </section>
+
+  <footer>© 2026 Alisha Nehra. Austin, Texas.</footer>
+</div>
+</body>
+</html>
